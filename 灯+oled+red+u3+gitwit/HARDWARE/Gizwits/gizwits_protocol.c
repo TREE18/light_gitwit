@@ -139,6 +139,146 @@ static int8_t ICACHE_FLASH_ATTR gizDataPoint2Event(gizwitsIssued_t *issuedData, 
         dataPoints->valueLed_OnOff_Change = gizStandardDecompressionValue(Led_OnOff_Change_BYTEOFFSET,Led_OnOff_Change_BITOFFSET,Led_OnOff_Change_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
     }
         
+    if(0x01 == issuedData->attrFlags.flagRed_OnOff)
+    {
+        info->event[info->num] = EVENT_Red_OnOff;
+        info->num++;
+        dataPoints->valueRed_OnOff = gizStandardDecompressionValue(Red_OnOff_BYTEOFFSET,Red_OnOff_BITOFFSET,Red_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagRGB_OnOff)
+    {
+        info->event[info->num] = EVENT_RGB_OnOff;
+        info->num++;
+        dataPoints->valueRGB_OnOff = gizStandardDecompressionValue(RGB_OnOff_BYTEOFFSET,RGB_OnOff_BITOFFSET,RGB_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagLedT_C_OnOff)
+    {
+        info->event[info->num] = EVENT_LedT_C_OnOff;
+        info->num++;
+        dataPoints->valueLedT_C_OnOff = gizStandardDecompressionValue(LedT_C_OnOff_BYTEOFFSET,LedT_C_OnOff_BITOFFSET,LedT_C_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagPosture_OnOff)
+    {
+        info->event[info->num] = EVENT_Posture_OnOff;
+        info->num++;
+        dataPoints->valuePosture_OnOff = gizStandardDecompressionValue(Posture_OnOff_BYTEOFFSET,Posture_OnOff_BITOFFSET,Posture_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagTime_OnOff)
+    {
+        info->event[info->num] = EVENT_Time_OnOff;
+        info->num++;
+        dataPoints->valueTime_OnOff = gizStandardDecompressionValue(Time_OnOff_BYTEOFFSET,Time_OnOff_BITOFFSET,Time_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagHomework_OnOff)
+    {
+        info->event[info->num] = EVENT_Homework_OnOff;
+        info->num++;
+        dataPoints->valueHomework_OnOff = gizStandardDecompressionValue(Homework_OnOff_BYTEOFFSET,Homework_OnOff_BITOFFSET,Homework_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagLed_auto_OnOff)
+    {
+        info->event[info->num] = EVENT_Led_auto_OnOff;
+        info->num++;
+        dataPoints->valueLed_auto_OnOff = gizStandardDecompressionValue(Led_auto_OnOff_BYTEOFFSET,Led_auto_OnOff_BITOFFSET,Led_auto_OnOff_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagenum)
+    {
+        info->event[info->num] = EVENT_enum;
+        info->num++;
+        dataPoints->valueenum = gizStandardDecompressionValue(enum_BYTEOFFSET,enum_BITOFFSET,enum_LEN,(uint8_t *)&issuedData->attrVals.wBitBuf,sizeof(issuedData->attrVals.wBitBuf));
+    }
+        
+        
+    if(0x01 == issuedData->attrFlags.flagLed_T)
+    {
+        info->event[info->num] = EVENT_Led_T;
+        info->num++;
+        dataPoints->valueLed_T = gizX2Y(Led_T_RATIO,  Led_T_ADDITION, issuedData->attrVals.valueLed_T); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagLed_S)
+    {
+        info->event[info->num] = EVENT_Led_S;
+        info->num++;
+        dataPoints->valueLed_S = gizX2Y(Led_S_RATIO,  Led_S_ADDITION, issuedData->attrVals.valueLed_S); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagR_value)
+    {
+        info->event[info->num] = EVENT_R_value;
+        info->num++;
+        dataPoints->valueR_value = gizX2Y(R_value_RATIO,  R_value_ADDITION, issuedData->attrVals.valueR_value); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagG_value)
+    {
+        info->event[info->num] = EVENT_G_value;
+        info->num++;
+        dataPoints->valueG_value = gizX2Y(G_value_RATIO,  G_value_ADDITION, issuedData->attrVals.valueG_value); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagB_value)
+    {
+        info->event[info->num] = EVENT_B_value;
+        info->num++;
+        dataPoints->valueB_value = gizX2Y(B_value_RATIO,  B_value_ADDITION, issuedData->attrVals.valueB_value); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagLed_T_consequent)
+    {
+        info->event[info->num] = EVENT_Led_T_consequent;
+        info->num++;
+        dataPoints->valueLed_T_consequent = gizX2Y(Led_T_consequent_RATIO,  Led_T_consequent_ADDITION, issuedData->attrVals.valueLed_T_consequent); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagPosture_first1)
+    {
+        info->event[info->num] = EVENT_Posture_first1;
+        info->num++;
+        dataPoints->valuePosture_first1 = gizX2Y(Posture_first1_RATIO,  Posture_first1_ADDITION, issuedData->attrVals.valuePosture_first1); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagPosture_first2)
+    {
+        info->event[info->num] = EVENT_Posture_first2;
+        info->num++;
+        dataPoints->valuePosture_first2 = gizX2Y(Posture_first2_RATIO,  Posture_first2_ADDITION, issuedData->attrVals.valuePosture_first2); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagPosture_first3)
+    {
+        info->event[info->num] = EVENT_Posture_first3;
+        info->num++;
+        dataPoints->valuePosture_first3 = gizX2Y(Posture_first3_RATIO,  Posture_first3_ADDITION, issuedData->attrVals.valuePosture_first3); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagTime_hour)
+    {
+        info->event[info->num] = EVENT_Time_hour;
+        info->num++;
+        dataPoints->valueTime_hour = gizX2Y(Time_hour_RATIO,  Time_hour_ADDITION, issuedData->attrVals.valueTime_hour); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flagTime_min)
+    {
+        info->event[info->num] = EVENT_Time_min;
+        info->num++;
+        dataPoints->valueTime_min = gizX2Y(Time_min_RATIO,  Time_min_ADDITION, issuedData->attrVals.valueTime_min); 
+    }
+        
+    if(0x01 == issuedData->attrFlags.flaghomework_distance)
+    {
+        info->event[info->num] = EVENT_homework_distance;
+        info->num++;
+        dataPoints->valuehomework_distance = gizX2Y(homework_distance_RATIO,  homework_distance_ADDITION, issuedData->attrVals.valuehomework_distance); 
+    }
     
     return 0;
 }
@@ -168,7 +308,131 @@ static int8_t ICACHE_FLASH_ATTR gizCheckReport(dataPoint_t *cur, dataPoint_t *la
         GIZWITS_LOG("valueLed_OnOff_Change Changed\n");
         ret = 1;
     }
+    if(last->valueRed_OnOff != cur->valueRed_OnOff)
+    {
+        GIZWITS_LOG("valueRed_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueRGB_OnOff != cur->valueRGB_OnOff)
+    {
+        GIZWITS_LOG("valueRGB_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueLedT_C_OnOff != cur->valueLedT_C_OnOff)
+    {
+        GIZWITS_LOG("valueLedT_C_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valuePosture_OnOff != cur->valuePosture_OnOff)
+    {
+        GIZWITS_LOG("valuePosture_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueTime_OnOff != cur->valueTime_OnOff)
+    {
+        GIZWITS_LOG("valueTime_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueHomework_OnOff != cur->valueHomework_OnOff)
+    {
+        GIZWITS_LOG("valueHomework_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueLed_auto_OnOff != cur->valueLed_auto_OnOff)
+    {
+        GIZWITS_LOG("valueLed_auto_OnOff Changed\n");
+        ret = 1;
+    }
+    if(last->valueenum != cur->valueenum)
+    {
+        GIZWITS_LOG("valueenum Changed\n");
+        ret = 1;
+    }
+    if(last->valueLed_T != cur->valueLed_T)
+    {
+        GIZWITS_LOG("valueLed_T Changed\n");
+        ret = 1;
+    }
+    if(last->valueLed_S != cur->valueLed_S)
+    {
+        GIZWITS_LOG("valueLed_S Changed\n");
+        ret = 1;
+    }
+    if(last->valueR_value != cur->valueR_value)
+    {
+        GIZWITS_LOG("valueR_value Changed\n");
+        ret = 1;
+    }
+    if(last->valueG_value != cur->valueG_value)
+    {
+        GIZWITS_LOG("valueG_value Changed\n");
+        ret = 1;
+    }
+    if(last->valueB_value != cur->valueB_value)
+    {
+        GIZWITS_LOG("valueB_value Changed\n");
+        ret = 1;
+    }
+    if(last->valueLed_T_consequent != cur->valueLed_T_consequent)
+    {
+        GIZWITS_LOG("valueLed_T_consequent Changed\n");
+        ret = 1;
+    }
+    if(last->valuePosture_first1 != cur->valuePosture_first1)
+    {
+        GIZWITS_LOG("valuePosture_first1 Changed\n");
+        ret = 1;
+    }
+    if(last->valuePosture_first2 != cur->valuePosture_first2)
+    {
+        GIZWITS_LOG("valuePosture_first2 Changed\n");
+        ret = 1;
+    }
+    if(last->valuePosture_first3 != cur->valuePosture_first3)
+    {
+        GIZWITS_LOG("valuePosture_first3 Changed\n");
+        ret = 1;
+    }
+    if(last->valueTime_hour != cur->valueTime_hour)
+    {
+        GIZWITS_LOG("valueTime_hour Changed\n");
+        ret = 1;
+    }
+    if(last->valueTime_min != cur->valueTime_min)
+    {
+        GIZWITS_LOG("valueTime_min Changed\n");
+        ret = 1;
+    }
+    if(last->valuehomework_distance != cur->valuehomework_distance)
+    {
+        GIZWITS_LOG("valuehomework_distance Changed\n");
+        ret = 1;
+    }
 
+    if(last->valuetemperature != cur->valuetemperature)
+    {
+        if(currentTime - lastReportTime >= REPORT_TIME_MAX)
+        {
+            GIZWITS_LOG("valuetemperature Changed\n");
+            ret = 1;
+        }
+    }
+    if(last->valueHumidity != cur->valueHumidity)
+    {
+        if(currentTime - lastReportTime >= REPORT_TIME_MAX)
+        {
+            GIZWITS_LOG("valueHumidity Changed\n");
+            ret = 1;
+        }
+    }
+    if(last->valueLed_auto_value != cur->valueLed_auto_value)
+    {
+        if(currentTime - lastReportTime >= REPORT_TIME_MAX)
+        {
+            GIZWITS_LOG("valueLed_auto_value Changed\n");
+            ret = 1;
+        }
+    }
 
     if(1 == ret)
     {
@@ -196,9 +460,40 @@ static int8_t ICACHE_FLASH_ATTR gizDataPoints2ReportData(dataPoint_t *dataPoints
     gizMemset((uint8_t *)devStatusPtr->wBitBuf,0,sizeof(devStatusPtr->wBitBuf));
 
     gizStandardCompressValue(Led_OnOff_Change_BYTEOFFSET,Led_OnOff_Change_BITOFFSET,Led_OnOff_Change_LEN,(uint8_t *)devStatusPtr,dataPoints->valueLed_OnOff_Change);
+    gizStandardCompressValue(Red_OnOff_BYTEOFFSET,Red_OnOff_BITOFFSET,Red_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueRed_OnOff);
+    gizStandardCompressValue(RGB_OnOff_BYTEOFFSET,RGB_OnOff_BITOFFSET,RGB_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueRGB_OnOff);
+    gizStandardCompressValue(LedT_C_OnOff_BYTEOFFSET,LedT_C_OnOff_BITOFFSET,LedT_C_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueLedT_C_OnOff);
+    gizStandardCompressValue(Posture_OnOff_BYTEOFFSET,Posture_OnOff_BITOFFSET,Posture_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valuePosture_OnOff);
+    gizStandardCompressValue(Time_OnOff_BYTEOFFSET,Time_OnOff_BITOFFSET,Time_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueTime_OnOff);
+    gizStandardCompressValue(Homework_OnOff_BYTEOFFSET,Homework_OnOff_BITOFFSET,Homework_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueHomework_OnOff);
+    gizStandardCompressValue(Led_auto_OnOff_BYTEOFFSET,Led_auto_OnOff_BITOFFSET,Led_auto_OnOff_LEN,(uint8_t *)devStatusPtr,dataPoints->valueLed_auto_OnOff);
+    if(dataPoints->valueenum >= enum_VALUE_MAX)
+    {
+        GIZWITS_LOG("[ERROR] valueenum Error , Illegal Overstep\n");
+        return -1;
+    }
+    else
+    {
+        gizStandardCompressValue(enum_BYTEOFFSET,enum_BITOFFSET,enum_LEN,(uint8_t *)devStatusPtr,dataPoints->valueenum);  
+    }
     gizByteOrderExchange((uint8_t *)devStatusPtr->wBitBuf,sizeof(devStatusPtr->wBitBuf));
 
+    devStatusPtr->valueLed_T = gizY2X(Led_T_RATIO,  Led_T_ADDITION, dataPoints->valueLed_T); 
+    devStatusPtr->valueLed_S = gizY2X(Led_S_RATIO,  Led_S_ADDITION, dataPoints->valueLed_S); 
+    devStatusPtr->valueR_value = gizY2X(R_value_RATIO,  R_value_ADDITION, dataPoints->valueR_value); 
+    devStatusPtr->valueG_value = gizY2X(G_value_RATIO,  G_value_ADDITION, dataPoints->valueG_value); 
+    devStatusPtr->valueB_value = gizY2X(B_value_RATIO,  B_value_ADDITION, dataPoints->valueB_value); 
+    devStatusPtr->valueLed_T_consequent = gizY2X(Led_T_consequent_RATIO,  Led_T_consequent_ADDITION, dataPoints->valueLed_T_consequent); 
+    devStatusPtr->valuePosture_first1 = gizY2X(Posture_first1_RATIO,  Posture_first1_ADDITION, dataPoints->valuePosture_first1); 
+    devStatusPtr->valuePosture_first2 = gizY2X(Posture_first2_RATIO,  Posture_first2_ADDITION, dataPoints->valuePosture_first2); 
+    devStatusPtr->valuePosture_first3 = gizY2X(Posture_first3_RATIO,  Posture_first3_ADDITION, dataPoints->valuePosture_first3); 
+    devStatusPtr->valueTime_hour = gizY2X(Time_hour_RATIO,  Time_hour_ADDITION, dataPoints->valueTime_hour); 
+    devStatusPtr->valueTime_min = gizY2X(Time_min_RATIO,  Time_min_ADDITION, dataPoints->valueTime_min); 
+    devStatusPtr->valuehomework_distance = gizY2X(homework_distance_RATIO,  homework_distance_ADDITION, dataPoints->valuehomework_distance); 
+    devStatusPtr->valuetemperature = gizY2X(temperature_RATIO,  temperature_ADDITION, dataPoints->valuetemperature); 
+    devStatusPtr->valueHumidity = gizY2X(Humidity_RATIO,  Humidity_ADDITION, dataPoints->valueHumidity); 
 
+    devStatusPtr->valueLed_auto_value = exchangeBytes(gizY2X(Led_auto_value_RATIO,  Led_auto_value_ADDITION, dataPoints->valueLed_auto_value)); 
 
 
 

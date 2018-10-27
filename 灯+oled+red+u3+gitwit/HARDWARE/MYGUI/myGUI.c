@@ -8,14 +8,21 @@
 #include "exti.h"
 #include "usart3.h"
 #include "usart4.h"
+#include "gizwits_product.h"
 
 u8 keyFun=0;        //装载菜单索引
 void (*keyFunPt)(); //指针函数
-
+//-----------------------------------------------------------//
 extern u8 music01[6],music02[6],music03[6],music04[6];
+//-----------------------------------------------------------//
 u8 keyFlag=0;				//记载键值
 extern char red_flag;
+extern dataPoint_t currentDataPoint;
+//-----------------------------------------------------------//
 char time_c=0,time_s=0,flag=0,homework_flag=0,posture_flag=0,night_flag=0,cmd=0;
+//-----------------------------------------------------------//
+char Led_OnOff_Change_flag=0,valueLed_T_value_last=0;;//云端下传标志位
+//-----------------------------------------------------------//
 int WIFI_Sign=33,Electricity_Sign=4,Flashlight_Sign=1;
 
 void Fun_light(void)
@@ -36,15 +43,18 @@ void Fun_light(void)
 	OLED_P16x16Ch(0*16,6,85);                   //显示 
 	OLED_P16x16Ch(1*16,6,86);                   //显示 
 	
+	valueLed_T_value_last=currentDataPoint.valueLed_T;
+	
 	while(1)
 	{
-		keyFlag = KEY_Scan(0);
+
 
 		if(keyFlag == KEY2_PRES||keyFlag == WKUP_PRES)break;
 		
-		if(keyFlag == KEY0_PRES)
+		
+		if(keyFlag == KEY0_PRES||(valueLed_T_value_last!=currentDataPoint.valueLed_T))
 		{	
-			
+		
 			OLED_P16x16Ch(4*16,2,37);
 			OLED_P16x16Ch(5*16,2,37);
 			OLED_P16x16Ch(6*16,2,37);
@@ -52,7 +62,7 @@ void Fun_light(void)
 			OLED_P16x16Ch(1*16,2,87);
 			OLED_P16x16Ch(2*16,2,88);
 			OLED_P16x16Ch(3*16,2,37);
-			
+		
 			OLED_P16x16Ch(6*16,2,95);
 			OLED_P16x16Ch(7*16,2,96);
 			
@@ -62,18 +72,31 @@ void Fun_light(void)
 	        OLED_P16x16Ch(0*16,6,85);                   //显示 
 	        OLED_P16x16Ch(1*16,6,86);                   //显示 
 			
+			
 			time_s=0;
 			time_c++;
 			flag=0;
 			
-			tem=k;
-			SendOneFrame_sample(&s6100[k++][0]);
-			if(k==4)k=0;
-
+			if(keyFlag == KEY0_PRES)
+			{
+				tem=k;//记录色温,调亮度会用到
+				SendOneFrame_sample(&s6100[k++][0]);
+				if(k==4)k=0;
+			}
+			
+			if(valueLed_T_value_last!=currentDataPoint.valueLed_T)
+			{
+				tem=currentDataPoint.valueLed_T;
+				SendOneFrame_sample(&s6100[tem][0]);
+				valueLed_T_value_last=currentDataPoint.valueLed_T;
+			}
 		}
+		
+
 		
 		if(keyFlag == KEY1_PRES)
 		{
+
 			OLED_P16x16Ch(4*16,2,37);
 			//OLED_P16x16Ch(5*16,2,37);
 			OLED_P16x16Ch(6*16,2,37);
@@ -108,6 +131,9 @@ void Fun_light(void)
 		
 		if( cmd==4&&posture_flag==1)Uart4_Send(music03,6);
 		else if(cmd==3)Uart4_Send(music04,6);
+		//------------------------------------------------------//
+		userHandle();
+        gizwitsHandle((dataPoint_t *)&currentDataPoint);
 		//------------------------------------------------------//
 	}
 }
@@ -183,6 +209,11 @@ void Fun_homework(void)
 		if( cmd==4&&posture_flag==1)Uart4_Send(music03,6);
 		else if(cmd==3)Uart4_Send(music04,6);
 	//-----------------------------------------------------------------------//			
+			
+		userHandle();
+        
+        gizwitsHandle((dataPoint_t *)&currentDataPoint);
+	//-----------------------------------------------------------------------//
 	}
 }
 //**********************************************************************************************************************//
@@ -240,6 +271,11 @@ void Fun_posture(void)
 		if( cmd==4&&posture_flag==1)Uart4_Send(music03,6);
 		else if(cmd==3)Uart4_Send(music04,6);
 		//------------------------------------------------------------//
+					
+		userHandle();
+        
+        gizwitsHandle((dataPoint_t *)&currentDataPoint);
+	//-----------------------------------------------------------------------//
 	}
 }
 
@@ -313,6 +349,11 @@ void Fun_night(void)
 		if( cmd==4&&posture_flag==1)Uart4_Send(music03,6);
 		else if(cmd==3)Uart4_Send(music04,6);
 		//--------------------------------------------------------------------------//
+					
+		userHandle();
+        
+        gizwitsHandle((dataPoint_t *)&currentDataPoint);
+	//-----------------------------------------------------------------------//
 	}
 }
 //*****************************************************************************************************************//

@@ -8,7 +8,7 @@
 ..\obj\gizwits_product.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\gizwits_product.o: ..\HARDWARE\Utils\common.h
 ..\obj\gizwits_product.o: D:\MDK511\ARM\ARMCC\Bin\..\include\ctype.h
-..\obj\gizwits_product.o: ..\SYSTEM\usart\usart.h
+..\obj\gizwits_product.o: ..\HARDWARE\USART3\usart3.h
 ..\obj\gizwits_product.o: ..\SYSTEM\sys\sys.h
 ..\obj\gizwits_product.o: ..\USER\stm32f10x.h
 ..\obj\gizwits_product.o: ..\CORE\core_cm3.h
@@ -38,3 +38,5 @@
 ..\obj\gizwits_product.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\gizwits_product.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\gizwits_product.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\gizwits_product.o: ..\HARDWARE\LED\led.h
+..\obj\gizwits_product.o: ..\SYSTEM\usart\usart.h

@@ -15,7 +15,8 @@
 ////////////////////////////////////////////////////////////////////////////////// 	 
 
 extern vu16 USART3_RX_STA;
-
+extern u16 link_time;
+extern char link_flag;
 //定时器7中断服务程序		    
 void TIM7_IRQHandler(void)
 { 	
@@ -102,5 +103,15 @@ void TIM3_IRQHandler(void)   //TIM3中断
 	{
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update  );  //清除TIMx更新中断标志 
 		gizTimerMs();
+		
+		if(link_flag==0)
+		{
+			link_time++;
+			if(link_time>=5000)
+			{	
+				link_time=0;
+				link_flag=1;
+			}
+		}
 	}
 }

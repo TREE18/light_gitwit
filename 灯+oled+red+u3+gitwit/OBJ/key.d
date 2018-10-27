@@ -31,3 +31,12 @@
 ..\obj\key.o: ..\HARDWARE\KEY\key.h
 ..\obj\key.o: ..\SYSTEM\sys\sys.h
 ..\obj\key.o: ..\SYSTEM\delay\delay.h
+..\obj\key.o: ..\HARDWARE\Gizwits\gizwits_product.h
+..\obj\key.o: ..\HARDWARE\Gizwits\gizwits_protocol.h
+..\obj\key.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\key.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\key.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\key.o: D:\MDK511\ARM\ARMCC\Bin\..\include\string.h
+..\obj\key.o: ..\HARDWARE\Utils\common.h
+..\obj\key.o: D:\MDK511\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\key.o: ..\HARDWARE\TIMER\timer.h

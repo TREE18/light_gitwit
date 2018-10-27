@@ -45,3 +45,10 @@
 ..\obj\main.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\main.o: ..\HARDWARE\USART3\usart3.h
 ..\obj\main.o: ..\HARDWARE\USART4\usart4.h
+..\obj\main.o: ..\HARDWARE\Gizwits\gizwits_product.h
+..\obj\main.o: ..\HARDWARE\Gizwits\gizwits_protocol.h
+..\obj\main.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\main.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\main.o: ..\HARDWARE\Utils\common.h
+..\obj\main.o: D:\MDK511\ARM\ARMCC\Bin\..\include\ctype.h
+..\obj\main.o: ..\HARDWARE\TIMER\timer.h

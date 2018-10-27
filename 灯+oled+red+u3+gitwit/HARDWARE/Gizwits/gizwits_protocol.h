@@ -38,12 +38,12 @@ extern "C" {
 /**@name Product Key  
 * @{
 */
-#define PRODUCT_KEY "44e313fcd096428dbe181c376c1b2774"
+#define PRODUCT_KEY "527d73d0617445f791241dd5fa736a93"
 /**@} */
 /**@name Product Secret  
 * @{
 */
-#define PRODUCT_SECRET "4777ffe5caef472681cd7601a9576c8f"
+#define PRODUCT_SECRET "7996ee9828214de0abece403709d6224"
                
 /**@name Device status data reporting interval
 * @{
@@ -77,17 +77,108 @@ extern "C" {
 #define Led_OnOff_Change_BYTEOFFSET                    0
 #define Led_OnOff_Change_BITOFFSET                     0
 #define Led_OnOff_Change_LEN                           1
+#define Red_OnOff_BYTEOFFSET                    0
+#define Red_OnOff_BITOFFSET                     1
+#define Red_OnOff_LEN                           1
+#define RGB_OnOff_BYTEOFFSET                    0
+#define RGB_OnOff_BITOFFSET                     2
+#define RGB_OnOff_LEN                           1
+#define LedT_C_OnOff_BYTEOFFSET                    0
+#define LedT_C_OnOff_BITOFFSET                     3
+#define LedT_C_OnOff_LEN                           1
+#define Posture_OnOff_BYTEOFFSET                    0
+#define Posture_OnOff_BITOFFSET                     4
+#define Posture_OnOff_LEN                           1
+#define Time_OnOff_BYTEOFFSET                    0
+#define Time_OnOff_BITOFFSET                     5
+#define Time_OnOff_LEN                           1
+#define Homework_OnOff_BYTEOFFSET                    0
+#define Homework_OnOff_BITOFFSET                     6
+#define Homework_OnOff_LEN                           1
+#define Led_auto_OnOff_BYTEOFFSET                    0
+#define Led_auto_OnOff_BITOFFSET                     7
+#define Led_auto_OnOff_LEN                           1
+#define enum_BYTEOFFSET                    1
+#define enum_BITOFFSET                     8
+#define enum_LEN                           2
 
+#define Led_T_RATIO                         1
+#define Led_T_ADDITION                      0
+#define Led_T_MIN                           0
+#define Led_T_MAX                           4
+#define Led_S_RATIO                         1
+#define Led_S_ADDITION                      0
+#define Led_S_MIN                           0
+#define Led_S_MAX                           4
+#define R_value_RATIO                         1
+#define R_value_ADDITION                      0
+#define R_value_MIN                           0
+#define R_value_MAX                           255
+#define G_value_RATIO                         1
+#define G_value_ADDITION                      0
+#define G_value_MIN                           0
+#define G_value_MAX                           255
+#define B_value_RATIO                         1
+#define B_value_ADDITION                      0
+#define B_value_MIN                           0
+#define B_value_MAX                           255
+#define Led_T_consequent_RATIO                         1
+#define Led_T_consequent_ADDITION                      0
+#define Led_T_consequent_MIN                           0
+#define Led_T_consequent_MAX                           44
+#define Posture_first1_RATIO                         1
+#define Posture_first1_ADDITION                      0
+#define Posture_first1_MIN                           0
+#define Posture_first1_MAX                           90
+#define Posture_first2_RATIO                         1
+#define Posture_first2_ADDITION                      0
+#define Posture_first2_MIN                           0
+#define Posture_first2_MAX                           90
+#define Posture_first3_RATIO                         1
+#define Posture_first3_ADDITION                      0
+#define Posture_first3_MIN                           0
+#define Posture_first3_MAX                           90
+#define Time_hour_RATIO                         1
+#define Time_hour_ADDITION                      0
+#define Time_hour_MIN                           0
+#define Time_hour_MAX                           24
+#define Time_min_RATIO                         1
+#define Time_min_ADDITION                      0
+#define Time_min_MIN                           0
+#define Time_min_MAX                           60
+#define homework_distance_RATIO                         1
+#define homework_distance_ADDITION                      0
+#define homework_distance_MIN                           0
+#define homework_distance_MAX                           10
+#define temperature_RATIO                         1
+#define temperature_ADDITION                      0
+#define temperature_MIN                           0
+#define temperature_MAX                           100
+#define Humidity_RATIO                         1
+#define Humidity_ADDITION                      0
+#define Humidity_MIN                           0
+#define Humidity_MAX                           100
+#define Led_auto_value_RATIO                         1
+#define Led_auto_value_ADDITION                      0
+#define Led_auto_value_MIN                           0
+#define Led_auto_value_MAX                           10000
 /**@} */
 
 /** Writable data points Boolean and enumerated variables occupy byte size */
-#define COUNT_W_BIT 1
+#define COUNT_W_BIT 2
 
 
 
 
 
 
+typedef enum
+{
+    enum_VALUE0 = 0,//enum0
+    enum_VALUE1 = 1,//enum1
+    enum_VALUE2 = 2,//enum2
+    enum_VALUE_MAX,
+} enum_ENUM_T;
 
 /** Event enumeration */
 typedef enum
@@ -110,6 +201,26 @@ typedef enum
   MODULE_INFO,                                      ///< Module information event
   TRANSPARENT_DATA,                                 ///< Transparency events
   EVENT_Led_OnOff_Change,
+  EVENT_Red_OnOff,
+  EVENT_RGB_OnOff,
+  EVENT_LedT_C_OnOff,
+  EVENT_Posture_OnOff,
+  EVENT_Time_OnOff,
+  EVENT_Homework_OnOff,
+  EVENT_Led_auto_OnOff,
+  EVENT_enum,
+  EVENT_Led_T,
+  EVENT_Led_S,
+  EVENT_R_value,
+  EVENT_G_value,
+  EVENT_B_value,
+  EVENT_Led_T_consequent,
+  EVENT_Posture_first1,
+  EVENT_Posture_first2,
+  EVENT_Posture_first3,
+  EVENT_Time_hour,
+  EVENT_Time_min,
+  EVENT_homework_distance,
   EVENT_TYPE_MAX                                    ///< Enumerate the number of members to calculate (user accidentally deleted)
 } EVENT_TYPE_T;
 
@@ -271,12 +382,55 @@ typedef enum
 /** User Area Device State Structure */
 typedef struct {
   bool valueLed_OnOff_Change;
+  bool valueRed_OnOff;
+  bool valueRGB_OnOff;
+  bool valueLedT_C_OnOff;
+  bool valuePosture_OnOff;
+  bool valueTime_OnOff;
+  bool valueHomework_OnOff;
+  bool valueLed_auto_OnOff;
+  uint32_t valueenum;
+  uint32_t valueLed_T;
+  uint32_t valueLed_S;
+  uint32_t valueR_value;
+  uint32_t valueG_value;
+  uint32_t valueB_value;
+  uint32_t valueLed_T_consequent;
+  uint32_t valuePosture_first1;
+  uint32_t valuePosture_first2;
+  uint32_t valuePosture_first3;
+  uint32_t valueTime_hour;
+  uint32_t valueTime_min;
+  uint32_t valuehomework_distance;
+  uint32_t valuetemperature;
+  uint32_t valueHumidity;
+  uint32_t valueLed_auto_value;
 } dataPoint_t;
 
 
 /** Corresponding to the protocol "4.10 WiFi module control device" in the flag " attr_flags" */ 
 typedef struct {
   uint8_t flagLed_OnOff_Change:1;
+  uint8_t flagRed_OnOff:1;
+  uint8_t flagRGB_OnOff:1;
+  uint8_t flagLedT_C_OnOff:1;
+  uint8_t flagPosture_OnOff:1;
+  uint8_t flagTime_OnOff:1;
+  uint8_t flagHomework_OnOff:1;
+  uint8_t flagLed_auto_OnOff:1;
+  uint8_t flagenum:1;
+  uint8_t flagLed_T:1;
+  uint8_t flagLed_S:1;
+  uint8_t flagR_value:1;
+  uint8_t flagG_value:1;
+  uint8_t flagB_value:1;
+  uint8_t flagLed_T_consequent:1;
+  uint8_t flagPosture_first1:1;
+  uint8_t flagPosture_first2:1;
+  uint8_t flagPosture_first3:1;
+  uint8_t flagTime_hour:1;
+  uint8_t flagTime_min:1;
+  uint8_t flaghomework_distance:1;
 } attrFlags_t;
 
 
@@ -284,6 +438,18 @@ typedef struct {
 
 typedef struct {
   uint8_t wBitBuf[COUNT_W_BIT];
+  uint8_t valueLed_T;
+  uint8_t valueLed_S;
+  uint8_t valueR_value;
+  uint8_t valueG_value;
+  uint8_t valueB_value;
+  uint8_t valueLed_T_consequent;
+  uint8_t valuePosture_first1;
+  uint8_t valuePosture_first2;
+  uint8_t valuePosture_first3;
+  uint8_t valueTime_hour;
+  uint8_t valueTime_min;
+  uint8_t valuehomework_distance;
 } attrVals_t;
 
 /** The flag "attr_flags (1B)" + data value "P0 protocol area" in the corresponding protocol "4.10 WiFi module control device"attr_vals(6B)" */ 
@@ -296,6 +462,21 @@ typedef struct {
 
 typedef struct {
   uint8_t wBitBuf[COUNT_W_BIT];
+  uint8_t valueLed_T;
+  uint8_t valueLed_S;
+  uint8_t valueR_value;
+  uint8_t valueG_value;
+  uint8_t valueB_value;
+  uint8_t valueLed_T_consequent;
+  uint8_t valuePosture_first1;
+  uint8_t valuePosture_first2;
+  uint8_t valuePosture_first3;
+  uint8_t valueTime_hour;
+  uint8_t valueTime_min;
+  uint8_t valuehomework_distance;
+  uint8_t valuetemperature;
+  uint8_t valueHumidity;
+  uint16_t valueLed_auto_value;
 } devStatus_t; 
 
 

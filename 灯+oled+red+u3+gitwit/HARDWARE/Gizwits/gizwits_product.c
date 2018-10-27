@@ -16,10 +16,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "gizwits_product.h"
+#include "usart3.h"
+#include "led.h"
 #include "usart.h"
-
 static uint32_t timerMsCount;
-
+extern char wifi_gizwit;
+extern char Led_OnOff_Change_flag;//云端数据点标志位
 /** Current datapoint */
 dataPoint_t currentDataPoint;
 
@@ -71,6 +73,92 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         if(0x01 == currentDataPoint.valueLed_OnOff_Change)
         {
           //user handle
+			Led_OnOff_Change_flag=1;
+        }
+        else
+        {
+          //user handle  
+			Led_OnOff_Change_flag=0;
+        }
+        break;
+      case EVENT_Red_OnOff:
+        currentDataPoint.valueRed_OnOff = dataPointPtr->valueRed_OnOff;
+        GIZWITS_LOG("Evt: EVENT_Red_OnOff %d \n", currentDataPoint.valueRed_OnOff);
+        if(0x01 == currentDataPoint.valueRed_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_RGB_OnOff:
+        currentDataPoint.valueRGB_OnOff = dataPointPtr->valueRGB_OnOff;
+        GIZWITS_LOG("Evt: EVENT_RGB_OnOff %d \n", currentDataPoint.valueRGB_OnOff);
+        if(0x01 == currentDataPoint.valueRGB_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_LedT_C_OnOff:
+        currentDataPoint.valueLedT_C_OnOff = dataPointPtr->valueLedT_C_OnOff;
+        GIZWITS_LOG("Evt: EVENT_LedT_C_OnOff %d \n", currentDataPoint.valueLedT_C_OnOff);
+        if(0x01 == currentDataPoint.valueLedT_C_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_Posture_OnOff:
+        currentDataPoint.valuePosture_OnOff = dataPointPtr->valuePosture_OnOff;
+        GIZWITS_LOG("Evt: EVENT_Posture_OnOff %d \n", currentDataPoint.valuePosture_OnOff);
+        if(0x01 == currentDataPoint.valuePosture_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_Time_OnOff:
+        currentDataPoint.valueTime_OnOff = dataPointPtr->valueTime_OnOff;
+        GIZWITS_LOG("Evt: EVENT_Time_OnOff %d \n", currentDataPoint.valueTime_OnOff);
+        if(0x01 == currentDataPoint.valueTime_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_Homework_OnOff:
+        currentDataPoint.valueHomework_OnOff = dataPointPtr->valueHomework_OnOff;
+        GIZWITS_LOG("Evt: EVENT_Homework_OnOff %d \n", currentDataPoint.valueHomework_OnOff);
+        if(0x01 == currentDataPoint.valueHomework_OnOff)
+        {
+          //user handle
+        }
+        else
+        {
+          //user handle    
+        }
+        break;
+      case EVENT_Led_auto_OnOff:
+        currentDataPoint.valueLed_auto_OnOff = dataPointPtr->valueLed_auto_OnOff;
+        GIZWITS_LOG("Evt: EVENT_Led_auto_OnOff %d \n", currentDataPoint.valueLed_auto_OnOff);
+        if(0x01 == currentDataPoint.valueLed_auto_OnOff)
+        {
+          //user handle
         }
         else
         {
@@ -78,7 +166,85 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
         }
         break;
 
+      case EVENT_enum:
+        currentDataPoint.valueenum = dataPointPtr->valueenum;
+        GIZWITS_LOG("Evt: EVENT_enum %d\n", currentDataPoint.valueenum);
+        switch(currentDataPoint.valueenum)
+        {
+          case enum_VALUE0:
+            //user handle
+            break;
+          case enum_VALUE1:
+            //user handle
+            break;
+          case enum_VALUE2:
+            //user handle
+            break;
+          default:
+            break;
+        }
+        break;
 
+      case EVENT_Led_T:
+        currentDataPoint.valueLed_T = dataPointPtr->valueLed_T;
+        GIZWITS_LOG("Evt:EVENT_Led_T %d\n",currentDataPoint.valueLed_T);
+        //user handle
+        break;
+      case EVENT_Led_S:
+        currentDataPoint.valueLed_S = dataPointPtr->valueLed_S;
+        GIZWITS_LOG("Evt:EVENT_Led_S %d\n",currentDataPoint.valueLed_S);
+        //user handle
+        break;
+      case EVENT_R_value:
+        currentDataPoint.valueR_value = dataPointPtr->valueR_value;
+        GIZWITS_LOG("Evt:EVENT_R_value %d\n",currentDataPoint.valueR_value);
+        //user handle
+        break;
+      case EVENT_G_value:
+        currentDataPoint.valueG_value = dataPointPtr->valueG_value;
+        GIZWITS_LOG("Evt:EVENT_G_value %d\n",currentDataPoint.valueG_value);
+        //user handle
+        break;
+      case EVENT_B_value:
+        currentDataPoint.valueB_value = dataPointPtr->valueB_value;
+        GIZWITS_LOG("Evt:EVENT_B_value %d\n",currentDataPoint.valueB_value);
+        //user handle
+        break;
+      case EVENT_Led_T_consequent:
+        currentDataPoint.valueLed_T_consequent = dataPointPtr->valueLed_T_consequent;
+        GIZWITS_LOG("Evt:EVENT_Led_T_consequent %d\n",currentDataPoint.valueLed_T_consequent);
+        //user handle
+        break;
+      case EVENT_Posture_first1:
+        currentDataPoint.valuePosture_first1 = dataPointPtr->valuePosture_first1;
+        GIZWITS_LOG("Evt:EVENT_Posture_first1 %d\n",currentDataPoint.valuePosture_first1);
+        //user handle
+        break;
+      case EVENT_Posture_first2:
+        currentDataPoint.valuePosture_first2 = dataPointPtr->valuePosture_first2;
+        GIZWITS_LOG("Evt:EVENT_Posture_first2 %d\n",currentDataPoint.valuePosture_first2);
+        //user handle
+        break;
+      case EVENT_Posture_first3:
+        currentDataPoint.valuePosture_first3 = dataPointPtr->valuePosture_first3;
+        GIZWITS_LOG("Evt:EVENT_Posture_first3 %d\n",currentDataPoint.valuePosture_first3);
+        //user handle
+        break;
+      case EVENT_Time_hour:
+        currentDataPoint.valueTime_hour = dataPointPtr->valueTime_hour;
+        GIZWITS_LOG("Evt:EVENT_Time_hour %d\n",currentDataPoint.valueTime_hour);
+        //user handle
+        break;
+      case EVENT_Time_min:
+        currentDataPoint.valueTime_min = dataPointPtr->valueTime_min;
+        GIZWITS_LOG("Evt:EVENT_Time_min %d\n",currentDataPoint.valueTime_min);
+        //user handle
+        break;
+      case EVENT_homework_distance:
+        currentDataPoint.valuehomework_distance = dataPointPtr->valuehomework_distance;
+        GIZWITS_LOG("Evt:EVENT_homework_distance %d\n",currentDataPoint.valuehomework_distance);
+        //user handle
+        break;
 
 
       case WIFI_SOFTAP:
@@ -93,7 +259,7 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
       case WIFI_DISCON_ROUTER:
  
         break;
-      case WIFI_CON_M2M:
+      case WIFI_CON_M2M: wifi_gizwit=1;
  
         break;
       case WIFI_DISCON_M2M:
@@ -138,6 +304,9 @@ int8_t gizwitsEventProcess(eventInfo_t *info, uint8_t *gizdata, uint32_t len)
 void userHandle(void)
 {
  /*
+    currentDataPoint.valuetemperature = ;//Add Sensor Data Collection
+    currentDataPoint.valueHumidity = ;//Add Sensor Data Collection
+    currentDataPoint.valueLed_auto_value = ;//Add Sensor Data Collection
 
     */
     
@@ -158,6 +327,29 @@ void userInit(void)
     /** Warning !!! DataPoint Variables Init , Must Within The Data Range **/ 
     /*
       currentDataPoint.valueLed_OnOff_Change = ;
+      currentDataPoint.valueRed_OnOff = ;
+      currentDataPoint.valueRGB_OnOff = ;
+      currentDataPoint.valueLedT_C_OnOff = ;
+      currentDataPoint.valuePosture_OnOff = ;
+      currentDataPoint.valueTime_OnOff = ;
+      currentDataPoint.valueHomework_OnOff = ;
+      currentDataPoint.valueLed_auto_OnOff = ;
+      currentDataPoint.valueenum = ;
+      currentDataPoint.valueLed_T = ;
+      currentDataPoint.valueLed_S = ;
+      currentDataPoint.valueR_value = ;
+      currentDataPoint.valueG_value = ;
+      currentDataPoint.valueB_value = ;
+      currentDataPoint.valueLed_T_consequent = ;
+      currentDataPoint.valuePosture_first1 = ;
+      currentDataPoint.valuePosture_first2 = ;
+      currentDataPoint.valuePosture_first3 = ;
+      currentDataPoint.valueTime_hour = ;
+      currentDataPoint.valueTime_min = ;
+      currentDataPoint.valuehomework_distance = ;
+      currentDataPoint.valuetemperature = ;
+      currentDataPoint.valueHumidity = ;
+      currentDataPoint.valueLed_auto_value = ;
     */
 
 }
@@ -265,13 +457,15 @@ int32_t uartWrite(uint8_t *buf, uint32_t len)
     #endif
 
     for(i=0; i<len; i++)
-    {	
-		USART_SendData(USART1,buf[i]);
-		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);		
+    {
         //USART_SendData(UART, buf[i]);//STM32 test demo
         //Serial port to achieve the function, the buf[i] sent to the module
+		USART_SendData(USART1,buf[i]);
+		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
+		
         if(i >=2 && buf[i] == 0xFF)
         {
+		
 			USART_SendData(USART1,0x55);
 			while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
           //Serial port to achieve the function, the 0x55 sent to the module

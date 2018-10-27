@@ -44,3 +44,9 @@
 ..\obj\mygui.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\mygui.o: ..\HARDWARE\USART3\usart3.h
 ..\obj\mygui.o: ..\HARDWARE\USART4\usart4.h
+..\obj\mygui.o: ..\HARDWARE\Gizwits\gizwits_product.h
+..\obj\mygui.o: ..\HARDWARE\Gizwits\gizwits_protocol.h
+..\obj\mygui.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdbool.h
+..\obj\mygui.o: D:\MDK511\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\mygui.o: ..\HARDWARE\Utils\common.h
+..\obj\mygui.o: D:\MDK511\ARM\ARMCC\Bin\..\include\ctype.h

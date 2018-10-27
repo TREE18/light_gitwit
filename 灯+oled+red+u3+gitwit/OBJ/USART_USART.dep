@@ -1,5 +1,5 @@
 Dependencies for Project 'USART', Target 'USART': (DO NOT MODIFY !)
-F (.\main.c)(0x5BBF181F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5BD456B4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HARDWARE\LED\led.h)(0x50513ABC)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5B928585)
@@ -45,6 +45,13 @@ I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\HARDWARE\EXTI\exti.h)(0x5BAF6D15)
 I (..\HARDWARE\USART3\usart3.h)(0x5BB85AF9)
 I (..\HARDWARE\USART4\usart4.h)(0x5BB87409)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
+I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
+I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
+I (..\HARDWARE\TIMER\timer.h)(0x5BC190A5)
 F (.\stm32f10x_it.c)(0x4EBEACB0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x4D99A426)
 I (stm32f10x.h)(0x5B928585)
@@ -137,7 +144,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5051A0AE)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-F (..\HARDWARE\KEY\key.c)(0x550BA50B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
+F (..\HARDWARE\KEY\key.c)(0x5BC1B261)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
 I (..\USER\stm32f10x.h)(0x5B928585)
 I (..\CORE\core_cm3.h)(0x4D523B58)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -169,6 +176,15 @@ I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\HARDWARE\KEY\key.h)(0x550A8567)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\SYSTEM\delay\delay.h)(0x555AC82B)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
+I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
+I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
+I (..\HARDWARE\TIMER\timer.h)(0x5BC190A5)
 F (..\HARDWARE\ws2812.c)(0x5BA0C9AA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\ws2812.o --omf_browse ..\obj\ws2812.crf --depend ..\obj\ws2812.d)
 I (..\SYSTEM\delay\delay.h)(0x555AC82B)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
@@ -267,7 +283,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\HARDWARE\OLED\codetab.h)(0x5BA1E796)
 I (..\SYSTEM\delay\delay.h)(0x555AC82B)
-F (..\HARDWARE\MYGUI\myGUI.c)(0x5BC18DC2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\mygui.o --omf_browse ..\obj\mygui.crf --depend ..\obj\mygui.d)
+F (..\HARDWARE\MYGUI\myGUI.c)(0x5BD453D2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\mygui.o --omf_browse ..\obj\mygui.crf --depend ..\obj\mygui.d)
 I (..\HARDWARE\MYGUI\myGUI.h)(0x5BBF1808)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5B928585)
@@ -312,6 +328,12 @@ I (..\HARDWARE\USART2\usart2.h)(0x5A5B267F)
 I (..\HARDWARE\EXTI\exti.h)(0x5BAF6D15)
 I (..\HARDWARE\USART3\usart3.h)(0x5BB85AF9)
 I (..\HARDWARE\USART4\usart4.h)(0x5BB87409)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
+I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
+I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
 F (..\HARDWARE\esp8266-ap\esp8266-ap.c)(0x5BC18E09)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\esp8266-ap.o --omf_browse ..\obj\esp8266-ap.crf --depend ..\obj\esp8266-ap.d)
 I (..\HARDWARE\esp8266-ap\esp8266-ap.h)(0x5BB85C07)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
@@ -489,7 +511,7 @@ I (D:\MDK511\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (..\HARDWARE\TIMER\timer.h)(0x5BC190A5)
-F (..\HARDWARE\TIMER\timer.c)(0x5BC190A5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
+F (..\HARDWARE\TIMER\timer.c)(0x5BD429EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
 I (..\HARDWARE\TIMER\timer.h)(0x5BC190A5)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5B928585)
@@ -521,13 +543,13 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5051A0AE)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\HARDWARE\LED\led.h)(0x50513ABC)
-I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BC190A5)
-I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5B59142A)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
 F (..\HARDWARE\USART4\USART4.C)(0x5BB88F28)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart4.o --omf_browse ..\obj\usart4.crf --depend ..\obj\usart4.d)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
@@ -661,7 +683,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5051A0AE)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-F (..\SYSTEM\usart\usart.c)(0x5BC19159)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
+F (..\SYSTEM\usart\usart.c)(0x5BC19162)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5B928585)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -693,12 +715,12 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\SYSTEM\usart\usart.h)(0x50517A82)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BC190A5)
-I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5B59142A)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
 F (..\CORE\core_cm3.c)(0x4C0C587E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\core_cm3.o --omf_browse ..\obj\core_cm3.crf --depend ..\obj\core_cm3.d)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -1371,17 +1393,17 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5051A0AE)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 F (..\README.TXT)(0x55100F76)()
-F (..\HARDWARE\Gizwits\gizwits_product.c)(0x5BC190A5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gizwits_product.o --omf_browse ..\obj\gizwits_product.crf --depend ..\obj\gizwits_product.d)
+F (..\HARDWARE\Gizwits\gizwits_product.c)(0x5BD43317)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gizwits_product.o --omf_browse ..\obj\gizwits_product.crf --depend ..\obj\gizwits_product.d)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BC190A5)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5B59142A)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
-I (..\SYSTEM\usart\usart.h)(0x50517A82)
+I (..\HARDWARE\USART3\usart3.h)(0x5BB85AF9)
 I (..\SYSTEM\sys\sys.h)(0x550F951B)
 I (..\USER\stm32f10x.h)(0x5B928585)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -1410,41 +1432,43 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x5051A0AE)
 I (..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-F (..\HARDWARE\Gizwits\gizwits_protocol.c)(0x5B59142A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gizwits_protocol.o --omf_browse ..\obj\gizwits_protocol.crf --depend ..\obj\gizwits_protocol.d)
-I (..\HARDWARE\Utils\ringBuffer.h)(0x5ADCF0CC)
+I (..\HARDWARE\LED\led.h)(0x50513ABC)
+I (..\SYSTEM\usart\usart.h)(0x50517A82)
+F (..\HARDWARE\Gizwits\gizwits_protocol.c)(0x5BD36588)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\gizwits_protocol.o --omf_browse ..\obj\gizwits_protocol.crf --depend ..\obj\gizwits_protocol.d)
+I (..\HARDWARE\Utils\ringBuffer.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BC190A5)
-I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5B59142A)
+I (..\HARDWARE\Gizwits\gizwits_product.h)(0x5BD3D9DF)
+I (..\HARDWARE\Gizwits\gizwits_protocol.h)(0x5BD36588)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
-I (..\HARDWARE\Utils\dataPointTools.h)(0x5ADCF0CC)
-F (..\HARDWARE\Utils\common.c)(0x5ADCF0CC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\common_1.o --omf_browse ..\obj\common_1.crf --depend ..\obj\common_1.d)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\dataPointTools.h)(0x5B7105E0)
+F (..\HARDWARE\Utils\common.c)(0x5B7105E0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\common_1.o --omf_browse ..\obj\common_1.crf --depend ..\obj\common_1.d)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
-F (..\HARDWARE\Utils\dataPointTools.c)(0x5ADCF0CC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\datapointtools.o --omf_browse ..\obj\datapointtools.crf --depend ..\obj\datapointtools.d)
-I (..\HARDWARE\Utils\dataPointTools.h)(0x5ADCF0CC)
+F (..\HARDWARE\Utils\dataPointTools.c)(0x5B7105E0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\datapointtools.o --omf_browse ..\obj\datapointtools.crf --depend ..\obj\datapointtools.d)
+I (..\HARDWARE\Utils\dataPointTools.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
-F (..\HARDWARE\Utils\ringbuffer.c)(0x5ADCF0CC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\ringbuffer.o --omf_browse ..\obj\ringbuffer.crf --depend ..\obj\ringbuffer.d)
-I (..\HARDWARE\Utils\ringBuffer.h)(0x5ADCF0CC)
+F (..\HARDWARE\Utils\ringbuffer.c)(0x5B7105E0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE -I ..\HARDWARE\SPI -I ..\HARDWARE\OLED -I ..\HARDWARE\MYGUI -I ..\HARDWARE\esp8266-ap -I ..\HARDWARE\USART2 -I ..\HARDWARE\MALLOC -I ..\HARDWARE\EXTI -I ..\HARDWARE\USART3 -I ..\HARDWARE\TIMER -I ..\HARDWARE\USART4 -I ..\HARDWARE\Utils -I ..\HARDWARE\Gizwits-I.\RTE\_USART-ID:\MDK511\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-ID:\MDK511\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\ringbuffer.o --omf_browse ..\obj\ringbuffer.crf --depend ..\obj\ringbuffer.d)
+I (..\HARDWARE\Utils\ringBuffer.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\HARDWARE\Utils\common.h)(0x5ADCF0CC)
+I (..\HARDWARE\Utils\common.h)(0x5B7105E0)
 I (D:\MDK511\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
 I (D:\MDK511\ARM\ARMCC\include\ctype.h)(0x57F606B6)
